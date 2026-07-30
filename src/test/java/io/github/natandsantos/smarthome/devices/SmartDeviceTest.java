@@ -20,5 +20,9 @@ public class SmartDeviceTest {
     	kitchenLamp.turnOff();
     	assertTrue(kitchenLamp.isOn);
     } 
-
+    @Test
+    public void displayStatusShouldOn() {
+    	var livingRoomTV = new SmartDevice("Living Room TV", 460);
+    	livingRoomTV.displayStatus();
+    }
 }

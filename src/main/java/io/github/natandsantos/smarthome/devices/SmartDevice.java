@@ -19,4 +19,14 @@ public class SmartDevice{
 	public void turnOff(){
 		isOn = false;
 	}
+	
+	public void displayStatus() {
+		System.out.println(name + "is currently ");
+		if(isOn){
+			System.out.println("ON (Uses: " + energyRating + "W");
+		}
+		else {
+			System.out.println("OFF");
+		}
+	}
 }
