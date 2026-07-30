@@ -14,5 +14,11 @@ public class SmartDeviceTest {
         bathroomLamp.turnOn();
         assertTrue(bathroomLamp.isOn);
     }
+    @Test
+    public void turnOffShouldFalse() {
+    	var kitchenLamp = new SmartDevice("Kitchen Lamp", 80);
+    	kitchenLamp.turnOff();
+    	assertTrue(kitchenLamp.isOn);
+    } 
 
 }
