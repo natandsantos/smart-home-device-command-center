@@ -23,6 +23,7 @@ public class SmartDeviceTest {
     @Test
     public void displayStatusShouldOn() {
     	var livingRoomTV = new SmartDevice("Living Room TV", 460);
+    	livingRoomTV.turnOn();
     	livingRoomTV.displayStatus();
     }
 }
