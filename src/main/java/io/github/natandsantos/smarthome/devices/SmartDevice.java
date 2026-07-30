@@ -1,5 +1,6 @@
 package io.github.natandsantos.smarthome.devices;
 
+
 public class SmartDevice{
 	public String name;
 	public boolean isOn;
