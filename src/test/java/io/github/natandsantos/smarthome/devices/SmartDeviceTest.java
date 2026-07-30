@@ -8,5 +8,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 public class SmartDeviceTest {
 
+    @Test
+    public void turnOnShouldTrue() {
+        var bathroomLamp = new SmartDevice("Bathroom Lamp", 90);
+        bathroomLamp.turnOn();
+        assertTrue(bathroomLamp.isOn);
+    }
 
 }
