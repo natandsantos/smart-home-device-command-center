@@ -26,4 +26,10 @@ public class SmartDeviceTest {
     	livingRoomTV.turnOn();
     	livingRoomTV.displayStatus();
     }
+    @Test
+    public void displayStatusShouldOff() {
+    	var bedroomTV = new SmartDevice("Bed Room TV", 300);
+    	bedroomTV.turnOff();
+    	bedroomTV.displayStatus();
+    }
 }
