@@ -21,6 +21,19 @@ public class DeviceManagerTest {
 	}
 	@Test
 	public void showAllDevicesTest() {
+		SmartDevice stDevice = new SmartDevice("Bathroom Light bulb", 8);
+		SmartDevice ndDevice = new SmartDevice("Bedroom Light Switch", 50);
+		SmartDevice rdDevice = new SmartDevice("Rice Cooker", 500);
+		manager.setupDevices(stDevice, ndDevice, rdDevice);
+		manager.deviceList[0].turnOn();
 		assertEquals(manager.showAllDevices(), manager.deviceList);
+	}
+	@Test
+	public void shouldTurnAllDevicesOff() {
+		SmartDevice stDevice = new SmartDevice("Bathroom Light bulb", 8);
+		SmartDevice ndDevice = new SmartDevice("Bedroom Light Switch", 50);
+		SmartDevice rdDevice = new SmartDevice("Rice Cooker", 500);
+		manager.setupDevices(stDevice, ndDevice, rdDevice);
+		manager.blackout();
 	}
 }

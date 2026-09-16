@@ -17,4 +17,12 @@ public class DeviceManager{
 		
 		return deviceList;
 	}
+	
+	public void blackout() {
+		int index = 0;
+		while(deviceList.length > index) {
+			deviceList[index].turnOff();
+			index++;
+		}
+	}
 }
