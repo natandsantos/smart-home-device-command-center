@@ -8,4 +8,13 @@ public class DeviceManager{
 		deviceList[1] = device2;
 		deviceList[2] = device3;
 	}
+	
+	public SmartDevice[] showAllDevices() {
+		int devicesLength = deviceList.length;
+		for(int i=0; i < devicesLength; i++) {
+			deviceList[i].displayStatus();
+		}
+		
+		return deviceList;
+	}
 }

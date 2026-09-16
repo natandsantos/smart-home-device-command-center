@@ -19,4 +19,8 @@ public class DeviceManagerTest {
 		assertEquals(manager.deviceList.length, 3);
 		assertFalse(manager.deviceList[0].isOn);
 	}
+	@Test
+	public void showAllDevicesTest() {
+		assertEquals(manager.showAllDevices(), manager.deviceList);
+	}
 }
