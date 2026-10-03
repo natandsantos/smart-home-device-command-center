@@ -35,5 +35,6 @@ public class DeviceManagerTest {
 		SmartDevice rdDevice = new SmartDevice("Rice Cooker", 500);
 		manager.setupDevices(stDevice, ndDevice, rdDevice);
 		manager.blackout();
+		manager.showAllDevices();
 	}
 }
