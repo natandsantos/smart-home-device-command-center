@@ -7,6 +7,9 @@ public class DeviceManager{
 		deviceList[0] = device1;
 		deviceList[1] = device2;
 		deviceList[2] = device3;
+		
+		System.out.println("Welcome to your Smart Device Command Center!");
+		System.out.println("It's all set up to run.");
 	}
 	
 	public SmartDevice[] showAllDevices() {
