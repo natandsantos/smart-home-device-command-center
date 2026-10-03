@@ -1,7 +1,7 @@
 package io.github.natandsantos.smarthome.devices;
 
 public class DeviceManager{
-	SmartDevice[] deviceList = new SmartDevice[3];
+	public SmartDevice[] deviceList = new SmartDevice[3];
 	
 	public void setupDevices(SmartDevice device1, SmartDevice device2, SmartDevice device3) {
 		deviceList[0] = device1;
