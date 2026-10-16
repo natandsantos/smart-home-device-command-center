@@ -13,6 +13,7 @@ public class SmartHomeApp{
     	manager.deviceList[1].turnOn();
     	manager.showAllDevices();
     	manager.blackout();
+    	manager.showAllDevices();
     }
 
 }

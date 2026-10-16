@@ -9,7 +9,7 @@ public class DeviceManager{
 		deviceList[2] = device3;
 		
 		System.out.println("Welcome to your Smart Device Command Center!");
-		System.out.println("It's all set up to run.");
+		System.out.println("It's all set up to run.\n");
 	}
 	
 	public SmartDevice[] showAllDevices() {

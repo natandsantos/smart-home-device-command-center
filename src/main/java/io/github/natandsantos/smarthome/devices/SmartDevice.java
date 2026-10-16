@@ -21,12 +21,12 @@ public class SmartDevice{
 	}
 	
 	public void displayStatus() {
-		System.out.println(name + " is currently ");
+		System.out.print(name + " is currently ");
 		if(isOn){
-			System.out.println("ON (Uses: " + energyRating + "W");
+			System.out.println("ON (Uses: " + energyRating + "W)\n");
 		}
 		else {
-			System.out.println("OFF");
+			System.out.println("OFF\n");
 		}
 	}
 }
