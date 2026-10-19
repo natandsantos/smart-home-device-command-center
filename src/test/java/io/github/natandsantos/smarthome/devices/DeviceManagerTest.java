@@ -21,7 +21,7 @@ public class DeviceManagerTest {
 	}
 	@Test
 	public void showAllDevicesTest() {
-		SmartDevice stDevice = new SmartDevice("Bathroom Light bulb", 8);
+		SmartDevice stDevice = new SmartDevice("Living Room Light bulb", 8);
 		SmartDevice ndDevice = new SmartDevice("Bedroom Light Switch", 50);
 		SmartDevice rdDevice = new SmartDevice("Rice Cooker", 500);
 		manager.setupDevices(stDevice, ndDevice, rdDevice);
@@ -32,7 +32,7 @@ public class DeviceManagerTest {
 	public void shouldTurnAllDevicesOff() {
 		SmartDevice stDevice = new SmartDevice("Bathroom Light bulb", 8);
 		SmartDevice ndDevice = new SmartDevice("Bedroom Light Switch", 50);
-		SmartDevice rdDevice = new SmartDevice("Rice Cooker", 500);
+		SmartDevice rdDevice = new SmartDevice("Living Room's Door", 500);
 		manager.setupDevices(stDevice, ndDevice, rdDevice);
 		manager.blackout();
 		manager.showAllDevices();

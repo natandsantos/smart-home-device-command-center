@@ -21,9 +21,9 @@ public class SmartDevice{
 	}
 	
 	public void displayStatus(){
-		System.out.print(name + " is currently ");
+		System.out.print(getName() + " is currently ");
 		if(isOn){
-			System.out.println("ON (Uses: " + energyRating + "W)\n");
+			System.out.println("ON (Uses: " + getEnergyRating() + "W)\n");
 		}
 		else {
 			System.out.println("OFF\n");
@@ -35,7 +35,9 @@ public class SmartDevice{
 			return name;
 		}
 		else {
-			return "This is an non functional empty device.";
+			String message = "This is an non functional empty device.";
+			System.out.println(message);
+			return message;
 		}
 	}
 	
@@ -54,11 +56,11 @@ public class SmartDevice{
 	}
 	
 	private void setIsOn(boolean turnOn){
-		if(name != "") {
+		if(getName() != "") {
 			isOn = turnOn;
 		}
 		else {
-			System.out.println("You cannot change empty devices's state");
+			System.out.println("You cannot change its state");
 		}
 	}
 	
@@ -67,11 +69,11 @@ public class SmartDevice{
 	}
 	
 	public void setEnergyRating(int energyRating){
-		if(name != ""){
+		if(getName() != ""){
 			this.energyRating = energyRating;
 		}
 		else{
-			System.out.println("You cannot change empty devices's energy rating.");
+			System.out.println("You cannot change its rating.");
 		}
 	}
 }
