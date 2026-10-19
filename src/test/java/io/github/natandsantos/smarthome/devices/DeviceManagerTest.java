@@ -17,7 +17,7 @@ public class DeviceManagerTest {
 		SmartDevice rdDevice = new SmartDevice("Rice Cooker", 500);
 		manager.setupDevices(stDevice, ndDevice, rdDevice);
 		assertEquals(manager.deviceList.length, 3);
-		assertFalse(manager.deviceList[0].isOn);
+		assertFalse(manager.deviceList[0].getIsOn());
 	}
 	@Test
 	public void showAllDevicesTest() {
