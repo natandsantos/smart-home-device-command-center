@@ -1,6 +1,5 @@
 package io.github.natandsantos.smarthome.devices;
 
-
 public class SmartDevice{
 	public static final int LOWER_POWER_LEVEL = 0;
 	public static final int HIGHER_POWER_LEVEL = 100;
@@ -24,7 +23,9 @@ public class SmartDevice{
 	}
 	
 	public void turnOn(){
-		setIsOn(true);
+		if(getPowerLevel() != LOWER_POWER_LEVEL || getIsOn() != true){
+			setIsOn(true);
+		}
 	}
   
 	public void turnOff(){
