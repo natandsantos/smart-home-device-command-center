@@ -32,4 +32,12 @@ public class SmartDeviceTest {
     	bedroomTV.turnOff();
     	bedroomTV.displayStatus();
     }
+    @Test
+    public void setPowerLevelShouldPass(){
+    	var coffeeMaker = new SmartDevice("Coffee Maker", 550, SmartDevice.HIGHER_POWER_LEVEL);
+    	System.out.println(coffeeMaker.getPowerLevel());
+    	coffeeMaker.displayStatus();
+    	
+    	
+    }
 }

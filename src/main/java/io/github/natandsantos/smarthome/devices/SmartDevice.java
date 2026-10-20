@@ -2,14 +2,25 @@ package io.github.natandsantos.smarthome.devices;
 
 
 public class SmartDevice{
+	public static final int LOWER_POWER_LEVEL = 0;
+	public static final int HIGHER_POWER_LEVEL = 100;
 	private String name;
 	private boolean isOn;
 	private int energyRating;
+	private int powerLevel;
 
+	public SmartDevice(String name, int energyRating, int powerLevel){
+		setName(name);
+		setEnergyRating(energyRating);
+		setIsOn(false);
+		setPowerLevel(powerLevel);
+	}
+	
 	public SmartDevice(String name, int energyRating){
 		setName(name);
 		setEnergyRating(energyRating);
 		setIsOn(false);
+		setPowerLevel(HIGHER_POWER_LEVEL);
 	}
 	
 	public void turnOn(){
@@ -76,4 +87,23 @@ public class SmartDevice{
 			System.out.println("You cannot change its rating.");
 		}
 	}
+	
+	public void setPowerLevel(int level){
+		if(getName() != "") {
+			if(level >= LOWER_POWER_LEVEL && level <= HIGHER_POWER_LEVEL){
+				powerLevel = level;
+			}
+			else{
+				System.out.println("Invalid power level value.");
+			}
+		}
+		else {
+			System.out.println("You cannot change its power level.");
+		}
+	}
+	
+	public int getPowerLevel(){
+		return powerLevel;
+	}
+	
 }
