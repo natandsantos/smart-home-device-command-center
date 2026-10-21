@@ -7,7 +7,7 @@ public class SmartDevice{
 	private boolean isOn;
 	private int energyRating;
 	private int powerLevel;
-
+	
 	public SmartDevice(String name, int energyRating, int powerLevel){
 		setName(name);
 		setEnergyRating(energyRating);
@@ -60,7 +60,6 @@ public class SmartDevice{
 		else {
 			System.out.println(getName() + "Please, give it a valid name to use it properly.");
 		}
-		
 	}
 	
 	public boolean getIsOn(){
@@ -105,6 +104,20 @@ public class SmartDevice{
 	
 	public int getPowerLevel(){
 		return powerLevel;
+	}
+	
+	public void executeAction(String command){
+		if(isOn == true && getPowerLevel() >= 15){
+			setPowerLevel(getPowerLevel()-15);
+		}
+		else {
+			System.out.print(getName() + " cannot execute '" + command);
+			System.out.println("' because it is turned OFF or has less than 15% power!");
+		}
+		if(getPowerLevel() == 0){
+			setIsOn(false);
+			System.out.println("The device ran out of power during execution. Sutting down...");
+		}
 	}
 	
 }

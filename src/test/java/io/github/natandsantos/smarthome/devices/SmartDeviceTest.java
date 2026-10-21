@@ -37,7 +37,18 @@ public class SmartDeviceTest {
     	var coffeeMaker = new SmartDevice("Coffee Maker", 550, SmartDevice.HIGHER_POWER_LEVEL);
     	System.out.println(coffeeMaker.getPowerLevel());
     	coffeeMaker.displayStatus();
-    	
-    	
+    }
+    
+    @Test
+    public void executeActionShouldShutDown(){
+    	var drinkFountain = new SmartDevice("Drink Fountain", 600, SmartDevice.HIGHER_POWER_LEVEL);
+    	drinkFountain.turnOn();
+    	System.out.println("Power Level: "+ drinkFountain.getPowerLevel());
+    	drinkFountain.executeAction("Drop Water");
+    	System.out.println("Power Level: "+ drinkFountain.getPowerLevel());
+    	for(int i = 6; i > 0; i--) {
+    		drinkFountain.executeAction("Drop Water");
+    		System.out.println("Power Level: "+ drinkFountain.getPowerLevel());
+    	}
     }
 }
