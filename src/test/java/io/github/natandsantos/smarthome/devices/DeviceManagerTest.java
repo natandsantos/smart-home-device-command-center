@@ -53,4 +53,5 @@ public class DeviceManagerTest {
 		manager.setupDevices(stDevice, ndDevice, rdDevice);
 		manager.boostDevicePower(-10, rdDevice);
 	}
+	
 }

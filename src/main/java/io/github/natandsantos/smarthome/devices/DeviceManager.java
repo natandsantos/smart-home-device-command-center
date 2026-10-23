@@ -15,7 +15,9 @@ public class DeviceManager{
 	public SmartDevice[] showAllDevices() {
 		int devicesLength = deviceList.length;
 		for(int i=0; i < devicesLength; i++) {
-			deviceList[i].displayStatus();
+			if(deviceList[i] != null){
+				deviceList[i].displayStatus();
+			}
 		}
 		
 		return deviceList;
