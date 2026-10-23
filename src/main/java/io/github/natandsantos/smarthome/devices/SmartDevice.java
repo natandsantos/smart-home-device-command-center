@@ -92,9 +92,15 @@ public class SmartDevice{
 		if(getName() != "") {
 			if(level >= LOWER_POWER_LEVEL && level <= HIGHER_POWER_LEVEL){
 				powerLevel = level;
+				System.out.println("Power level set successefully.");
 			}
-			else{
-				System.out.println("Invalid power level value.");
+			else if(level < LOWER_POWER_LEVEL){
+				powerLevel = 0;
+				System.out.println("Power level depleted.");
+			}
+			else if(level > LOWER_POWER_LEVEL){
+				powerLevel = 100;
+				System.out.println("Power Level full.");
 			}
 		}
 		else {

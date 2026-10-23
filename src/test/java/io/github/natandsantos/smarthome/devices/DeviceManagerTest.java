@@ -46,7 +46,7 @@ public class DeviceManagerTest {
 		manager.boostDevicePower(1, rdDevice);
 	}
 	@Test
-	public void shoulNotBoostDevice() {
+	public void shouldNotBoostDeviceAsIntended() {
 		SmartDevice stDevice = new SmartDevice("Bathroom Light bulb", 8);
 		SmartDevice ndDevice = new SmartDevice("Bedroom Light Switch", 50);
 		SmartDevice rdDevice = new SmartDevice("Living Room's Door", 500);
