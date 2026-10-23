@@ -28,4 +28,9 @@ public class DeviceManager{
 			index++;
 		}
 	}
+	
+	public void boostDevicePower(int boostAmount, SmartDevice device){
+		boostAmount *= 2;
+		device.setPowerLevel(boostAmount);
+	}
 }

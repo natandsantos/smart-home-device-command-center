@@ -37,4 +37,20 @@ public class DeviceManagerTest {
 		manager.blackout();
 		manager.showAllDevices();
 	}
+	@Test
+	public void shoulBoostDevice() {
+		SmartDevice stDevice = new SmartDevice("Bathroom Light bulb", 8);
+		SmartDevice ndDevice = new SmartDevice("Bedroom Light Switch", 50);
+		SmartDevice rdDevice = new SmartDevice("Living Room's Door", 500);
+		manager.setupDevices(stDevice, ndDevice, rdDevice);
+		manager.boostDevicePower(1, rdDevice);
+	}
+	@Test
+	public void shoulNotBoostDevice() {
+		SmartDevice stDevice = new SmartDevice("Bathroom Light bulb", 8);
+		SmartDevice ndDevice = new SmartDevice("Bedroom Light Switch", 50);
+		SmartDevice rdDevice = new SmartDevice("Living Room's Door", 500);
+		manager.setupDevices(stDevice, ndDevice, rdDevice);
+		manager.boostDevicePower(-10, rdDevice);
+	}
 }
