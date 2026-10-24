@@ -18,6 +18,9 @@ public class DeviceManager{
 			if(deviceList[i] != null){
 				deviceList[i].displayStatus();
 			}
+			else {
+				System.out.println("Null object.");
+			}
 		}
 		
 		return deviceList;
@@ -35,4 +38,6 @@ public class DeviceManager{
 		boostAmount *= 2;
 		device.setPowerLevel(boostAmount);
 	}
+	
+	
 }
