@@ -39,5 +39,15 @@ public class DeviceManager{
 		device.setPowerLevel(boostAmount);
 	}
 	
-	
+	public void applyPowerSaver(){
+		int devicesLength = deviceList.length;
+		for(int i = 0; i < devicesLength; i++){
+			if(deviceList[i] != null){
+				deviceList[i].setPowerLevel(deviceList[i].getPowerLevel()/2);
+			}
+			else{
+				System.out.println("You cannot save power of null objects.");
+			}
+		}
+	}
 }
