@@ -40,7 +40,7 @@ public class SmartDevice{
 		else {
 			System.out.println("OFF");
 		}
-		System.out.println("Power Level: " + getPowerLevel() + "%");
+		System.out.println("Power Level: " + getPowerLevel() + "%\n");
 	}
 	
 	public String getName(){
