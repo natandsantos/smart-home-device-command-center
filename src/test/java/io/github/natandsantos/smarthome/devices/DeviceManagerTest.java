@@ -53,5 +53,13 @@ public class DeviceManagerTest {
 		manager.setupDevices(stDevice, ndDevice, rdDevice);
 		manager.boostDevicePower(-10, rdDevice);
 	}
-	
+	@Test
+	public void shouldApplyPowerSaver(){
+		SmartDevice stDevice = new SmartDevice("Bathroom Light bulb", 8, 100);
+		SmartDevice ndDevice = new SmartDevice("Bedroom Light Switch", 50, 70);
+		SmartDevice rdDevice = new SmartDevice("Living Room's Door", 500, 37);
+		manager.setupDevices(stDevice, ndDevice, rdDevice);
+		manager.applyPowerSaver();
+		manager.showAllDevices();
+	}
 }
