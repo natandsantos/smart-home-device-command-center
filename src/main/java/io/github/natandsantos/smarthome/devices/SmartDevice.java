@@ -35,11 +35,12 @@ public class SmartDevice{
 	public void displayStatus(){
 		System.out.print(getName() + " is currently ");
 		if(isOn){
-			System.out.println("ON (Uses: " + getEnergyRating() + "W)\n");
+			System.out.println("ON (Uses: " + getEnergyRating() + "W)");
 		}
 		else {
-			System.out.println("OFF\n");
+			System.out.println("OFF");
 		}
+		System.out.println("Power Level: " + getPowerLevel() + "%");
 	}
 	
 	public String getName(){
