@@ -8,7 +8,7 @@ public class SmartDevice{
 	private int energyRating;
 	private int powerLevel;
 	
-	public SmartDevice(String name, int energyRating, int powerLevel){
+	public SmartDevice(String name, int energyRating, double powerLevel){
 		setName(name);
 		setEnergyRating(energyRating);
 		setIsOn(false);
@@ -93,6 +93,23 @@ public class SmartDevice{
 		if(getName() != "") {
 			if(level >= LOWER_POWER_LEVEL && level <= HIGHER_POWER_LEVEL){
 				powerLevel = level;
+			}
+			else if(level < LOWER_POWER_LEVEL){
+				powerLevel = 0;
+			}
+			else if(level > LOWER_POWER_LEVEL){
+				powerLevel = 100;
+			}
+		}
+		else {
+			System.out.println("You cannot change its power level.");
+		}
+	}
+	
+	public void setPowerLevel(double level) {
+		if(getName() != "") {
+			if(level >= LOWER_POWER_LEVEL && level <= HIGHER_POWER_LEVEL){
+				powerLevel = (int)level;
 				System.out.println("Power level set successefully.");
 			}
 			else if(level < LOWER_POWER_LEVEL){
