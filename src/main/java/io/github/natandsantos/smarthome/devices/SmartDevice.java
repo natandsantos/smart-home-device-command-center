@@ -23,7 +23,7 @@ public class SmartDevice{
 	}
 	
 	public void turnOn(){
-		if(getPowerLevel() != LOWER_POWER_LEVEL || getIsOn() != true){
+		if(getPowerLevel() != LOWER_POWER_LEVEL && getIsOn() != true){
 			setIsOn(true);
 		}
 	}

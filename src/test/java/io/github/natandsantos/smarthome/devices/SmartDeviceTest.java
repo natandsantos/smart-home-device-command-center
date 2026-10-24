@@ -2,6 +2,7 @@ package io.github.natandsantos.smarthome.devices;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  * Unit test for simple App.
@@ -15,10 +16,17 @@ public class SmartDeviceTest {
         assertTrue(bathroomLamp.getIsOn());
     }
     @Test
+    public void turnOnShouldFalse(){
+    	int powerLevel = 0;
+    	var bathroomLamp = new SmartDevice("Bathroom Lamp", 90, powerLevel);
+        bathroomLamp.turnOn();
+        assertFalse(bathroomLamp.getIsOn());
+    }
+    @Test
     public void turnOffShouldFalse() {
     	var kitchenLamp = new SmartDevice("Kitchen Lamp", 80);
     	kitchenLamp.turnOff();
-    	assertTrue(!kitchenLamp.getIsOn());
+    	assertFalse(kitchenLamp.getIsOn());
     } 
     @Test
     public void displayStatusShouldOn() {
