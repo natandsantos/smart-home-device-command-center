@@ -36,7 +36,7 @@ public class DeviceManager{
 	
 	public void boostDevicePower(int boostAmount, SmartDevice device){
 		boostAmount *= 2;
-		device.setPowerLevel(boostAmount);
+		device.setPowerLevel(device.getPowerLevel() + boostAmount);
 	}
 	
 	public void applyPowerSaver(){

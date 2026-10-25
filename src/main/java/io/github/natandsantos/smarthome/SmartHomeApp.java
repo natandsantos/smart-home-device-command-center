@@ -21,12 +21,13 @@ public class SmartHomeApp{
     	int boostAmount = 17;
     	System.out.println(boostAmount);
     	manager.boostDevicePower(boostAmount, livingRoomCurtain);
-    	System.out.println(boostAmount);
+    	System.out.println(boostAmount + "\n");
     	
-    	manager.deviceList[3].executeAction("Turn volume up");
-    	manager.deviceList[3].turnOff();
-    	manager.deviceList[3].executeAction("Change channel");
-    	manager.deviceList[3].displayStatus();
+    	manager.deviceList[2].turnOn();
+    	manager.deviceList[2].executeAction("Close");
+    	manager.deviceList[2].turnOff();
+    	manager.deviceList[2].executeAction("Open");
+    	manager.deviceList[2].displayStatus();
     	
     	manager.deviceList[0].executeAction("High up temperature");
     }
