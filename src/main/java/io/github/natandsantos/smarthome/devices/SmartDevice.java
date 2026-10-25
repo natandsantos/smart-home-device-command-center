@@ -55,11 +55,11 @@ public class SmartDevice{
 	}
 	
 	public void setName(String deviceName){
-		if(deviceName != "" && deviceName.length() > 5){
+		if(deviceName.equals("") && deviceName.trim().length() > 5){
 			name = deviceName;
 		}
 		else {
-			System.out.println(getName() + "Please, give it a valid name to use it properly.");
+			System.out.println("Please, give it a valid name to use it properly.");
 		}
 	}
 	
