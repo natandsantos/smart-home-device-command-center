@@ -55,7 +55,7 @@ public class SmartDevice{
 	}
 	
 	public void setName(String deviceName){
-		if(deviceName.equals("") && deviceName.trim().length() > 5){
+		if(!deviceName.equals("") && deviceName.trim().length() > 5){
 			name = deviceName;
 		}
 		else {
