@@ -44,7 +44,7 @@ public class SmartDevice{
 	}
 	
 	public String getName(){
-		if(name != "") {
+		if(!name.equals(null)){
 			return name;
 		}
 		else {
@@ -68,7 +68,7 @@ public class SmartDevice{
 	}
 	
 	private void setIsOn(boolean turnOn){
-		if(getName() != "") {
+		if(!getName().equals(null)) {
 			isOn = turnOn;
 		}
 		else {
@@ -81,7 +81,7 @@ public class SmartDevice{
 	}
 	
 	public void setEnergyRating(int energyRating){
-		if(getName() != ""){
+		if(!getName().equals(null)){
 			this.energyRating = energyRating;
 		}
 		else{
@@ -90,7 +90,7 @@ public class SmartDevice{
 	}
 	
 	public void setPowerLevel(int level){
-		if(getName() != "") {
+		if(!getName().equals(null)) {
 			if(level >= LOWER_POWER_LEVEL && level <= HIGHER_POWER_LEVEL){
 				powerLevel = level;
 			}
@@ -107,7 +107,7 @@ public class SmartDevice{
 	}
 	
 	public void setPowerLevel(double level) {
-		if(getName() != "") {
+		if(!getName().equals(null)) {
 			if(level >= LOWER_POWER_LEVEL && level <= HIGHER_POWER_LEVEL){
 				powerLevel = (int)level;
 				System.out.println("Power level set successefully.");
