@@ -82,7 +82,12 @@ public class SmartDevice{
 	
 	public void setEnergyRating(int energyRating){
 		if(!getName().equals(null)){
-			this.energyRating = energyRating;
+			if(energyRating >= 0) {
+				this.energyRating = energyRating;
+			}
+			else{ 
+				System.out.println("Forbidden negative energy rating.");
+			}
 		}
 		else{
 			System.out.println("You cannot change its rating.");
