@@ -28,9 +28,14 @@ public class DeviceManager{
 	
 	public void blackout() {
 		int index = 0;
-		while(deviceList.length > index) {
-			deviceList[index].turnOff();
-			index++;
+		while(deviceList.length > index){
+			if(deviceList[index] != null){
+				deviceList[index].turnOff();
+				index++;
+			}
+			else{
+				System.out.println("You cannot turn off null obejcts.");
+			}
 		}
 	}
 	
