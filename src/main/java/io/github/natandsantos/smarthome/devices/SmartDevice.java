@@ -44,14 +44,11 @@ public class SmartDevice{
 	}
 	
 	public String getName(){
-		if(name != null){
-			return name;
-		}
-		else {
+		if(name == null){
 			String message = "This is an non functional empty device.";
 			System.out.println(message);
-			return message;
 		}
+		return name;
 	}
 	
 	public void setName(String deviceName){
