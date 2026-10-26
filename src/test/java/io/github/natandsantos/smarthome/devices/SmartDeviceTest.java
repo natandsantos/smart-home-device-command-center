@@ -59,4 +59,14 @@ public class SmartDeviceTest {
     		System.out.println("Power Level: "+ drinkFountain.getPowerLevel());
     	}
     }
+    @Test
+    public void nameShouldBeNotNull() {
+    	SmartDevice fridge = new SmartDevice("Fridge 2000", 1500, 100);
+    	System.out.println(fridge.getName());
+    }
+    @Test
+    public void nameShouldBeNull() {
+    	SmartDevice fridge = new SmartDevice("", 1500, 100);
+    	System.out.println(fridge.getName());
+    }
 }

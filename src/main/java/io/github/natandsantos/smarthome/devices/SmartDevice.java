@@ -44,7 +44,7 @@ public class SmartDevice{
 	}
 	
 	public String getName(){
-		if(!name.equals(null)){
+		if(name != null){
 			return name;
 		}
 		else {
