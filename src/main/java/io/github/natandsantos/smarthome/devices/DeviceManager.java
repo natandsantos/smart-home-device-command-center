@@ -31,11 +31,12 @@ public class DeviceManager{
 		while(deviceList.length > index){
 			if(deviceList[index] != null){
 				deviceList[index].turnOff();
-				index++;
+				
 			}
 			else{
 				System.out.println("You cannot turn off null obejcts.");
 			}
+			index++;
 		}
 	}
 	
